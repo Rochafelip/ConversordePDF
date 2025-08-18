@@ -1,0 +1,8 @@
+<h1>Upload PDF para OCR</h1>
+
+<%= form_with url: pdfs_path, local: true, multipart: true do |f| %>
+  <%= f.file_field :pdf_file, accept: 'application/pdf' %><br><br>
+  <%= f.submit "Enviar e Ler" %>
+<% end %>
+
+<%= flash[:alert] %>
